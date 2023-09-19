@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Deck {
     private ArrayList<Card> cards = new ArrayList<>();
@@ -10,10 +11,11 @@ public class Deck {
 
         for (int suit = 0; suit < 4; suit++) {
             for (int rank = 0; rank < 12; rank++) {
-//                cards.add(ranks[rank] + " of " + suits[suit]);
                 cards.add(new Card(ranks[rank], suits[suit]));
             }
         }
+
+        shuffleDeck();
     }
 
     public void displayCards() {
@@ -22,5 +24,16 @@ public class Deck {
 
     public int countCards() {
         return cards.size();
+    }
+
+    public void shuffleDeck() {
+        Collections.shuffle(cards);
+    }
+
+    public Card deal() {
+        Card dealtCard = cards.get(0);
+        cards.remove(0);
+
+        return dealtCard;
     }
 }
