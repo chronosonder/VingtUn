@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aad092d4-1106-419c-9d83-cdf7d50e4298" name="Changes" comment="Added .iml to .gitignore">
+    <list default="true" id="aad092d4-1106-419c-9d83-cdf7d50e4298" name="Changes" comment="Created rough functionality of Player and Game classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Deck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +22,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/Deck.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -54,7 +57,8 @@
       <option name="presentableId" value="Default" />
       <updated>1695155718141</updated>
       <workItem from="1695155719202" duration="6343000" />
-      <workItem from="1695197670431" duration="1906000" />
+      <workItem from="1695197670431" duration="6804000" />
+      <workItem from="1695237634192" duration="422000" />
     </task>
     <task id="LOCAL-00001" summary="Created Card class">
       <created>1695159227883</created>
@@ -77,7 +81,28 @@
       <option name="project" value="LOCAL" />
       <updated>1695162109408</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="-Finished basic functionality of Deck class&#10;-Added .iml to .gitignore">
+      <created>1695199938827</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695199938827</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Created basic functionality of Player and Game classes">
+      <created>1695204396292</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1695204396292</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Created rough functionality of Player and Game classes">
+      <created>1695204419330</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1695204419330</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +135,9 @@
     <MESSAGE value="Created Card class" />
     <MESSAGE value="Created Deck class" />
     <MESSAGE value="Added .iml to .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added .iml to .gitignore" />
+    <MESSAGE value="-Finished basic functionality of Deck class&#10;-Added .iml to .gitignore" />
+    <MESSAGE value="Created basic functionality of Player and Game classes" />
+    <MESSAGE value="Created rough functionality of Player and Game classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created rough functionality of Player and Game classes" />
   </component>
 </project>
