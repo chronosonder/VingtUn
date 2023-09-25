@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="aad092d4-1106-419c-9d83-cdf7d50e4298" name="Changes" comment="Created rough functionality of Player and Game classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +59,8 @@
       <updated>1695155718141</updated>
       <workItem from="1695155719202" duration="6343000" />
       <workItem from="1695197670431" duration="6804000" />
-      <workItem from="1695237634192" duration="422000" />
+      <workItem from="1695237634192" duration="1796000" />
+      <workItem from="1695672027579" duration="1688000" />
     </task>
     <task id="LOCAL-00001" summary="Created Card class">
       <created>1695159227883</created>
@@ -102,7 +104,21 @@
       <option name="project" value="LOCAL" />
       <updated>1695204419330</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Created rough functionality of Player and Game classes">
+      <created>1695239285901</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1695239285901</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Created rough functionality of Player and Game classes">
+      <created>1695239359256</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1695239359256</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
