@@ -22,10 +22,6 @@ public class Deck {
         cards.forEach((card) -> System.out.println(card.display()));
     }
 
-    public int countCards() {
-        return cards.size();
-    }
-
     public void shuffleDeck() {
         Collections.shuffle(cards);
     }
