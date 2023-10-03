@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aad092d4-1106-419c-9d83-cdf7d50e4298" name="Changes" comment="Created rough functionality of Player and Game classes">
-      <change afterPath="$PROJECT_DIR$/src/Dealer.java" afterDir="false" />
+    <list default="true" id="aad092d4-1106-419c-9d83-cdf7d50e4298" name="Changes" comment="What a fucking mess, don't look at this commit.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Deck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
@@ -27,6 +26,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -127,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695239359256</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="What a fucking mess, don't look at this commit.">
+      <created>1695729307705</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1695729307705</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +174,7 @@
     <MESSAGE value="-Finished basic functionality of Deck class&#10;-Added .iml to .gitignore" />
     <MESSAGE value="Created basic functionality of Player and Game classes" />
     <MESSAGE value="Created rough functionality of Player and Game classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created rough functionality of Player and Game classes" />
+    <MESSAGE value="What a fucking mess, don't look at this commit." />
+    <option name="LAST_COMMIT_MESSAGE" value="What a fucking mess, don't look at this commit." />
   </component>
 </project>

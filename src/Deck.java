@@ -18,10 +18,6 @@ public class Deck {
         shuffleDeck();
     }
 
-    public void displayCards() {
-        cards.forEach((card) -> System.out.println(card.display()));
-    }
-
     public void shuffleDeck() {
         Collections.shuffle(cards);
     }
