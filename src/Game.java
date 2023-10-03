@@ -6,6 +6,8 @@ public class Game {
     Scanner kInput;
     Deck gameDeck;
     ArrayList<Player> gamePlayers;
+    ArrayList<Player> bustPlayers;
+    ArrayList<Player> stuckPlayers;
     Player currentPlayer;
     Dealer gameDealer;
     boolean running;
@@ -16,6 +18,8 @@ public class Game {
         this.gameDealer = new Dealer();
         this.kInput = new Scanner(System.in);
         this.gamePlayers = addPlayers;
+        this.bustPlayers = new ArrayList<>();
+        this.stuckPlayers = new ArrayList<>();
 
         this.running = true;
     }
@@ -27,12 +31,14 @@ public class Game {
 
         while (running) {
             dealerTurn();
-
-            for (Player player: gamePlayers){
-                this.currentPlayer = player;
-                playerTurn();
+            if (gamePlayers.isEmpty()){
+                endGame();
+            } else {
+                for (Player player: gamePlayers){
+                    this.currentPlayer = player;
+                    playerTurn();
+                }
             }
-
         }//END WHILE
     }
 
@@ -67,13 +73,15 @@ public class Game {
 
             if (playerBust(currentPlayer)) {
                 System.out.println("You went bust!");
-                endGame();
+
+                gamePlayers.remove(currentPlayer);
+                bustPlayers.add(currentPlayer);
             }
         } else {
             System.out.printf("%s sticks with hand value of %d.", currentPlayer.getName(), currentPlayer.getHandValue());
-            System.out.printf("%nDealer hand value: %d.%n", gameDealer.getHandValue());
 
-            endGame();
+            gamePlayers.remove(currentPlayer);
+            stuckPlayers.add(currentPlayer);
         }
     }
     public boolean playerBust(Player currentPlayer) {
@@ -89,11 +97,22 @@ public class Game {
     }
 
     public void endGame() {
-        if (currentPlayer.getHandValue() > gameDealer.getHandValue()) {
-            System.out.printf("%n%s wins!!", currentPlayer.getName());
-        } else {
-            System.out.println("Dealer wins.");
+//        Display bust players
+        for (Player player: bustPlayers){
+            System.out.printf("\n%s went bust with a hand of %d.", player.getName(), player.getHandValue());
         }
+
+//        Display players hands
+        for (Player player: stuckPlayers){
+            System.out.printf("\n%s sticks a hand of %d.", player.getName(), player.getHandValue());
+        }
+
+
+//        if (currentPlayer.getHandValue() > gameDealer.getHandValue()) {
+//            System.out.printf("%n%s wins!!", currentPlayer.getName());
+//        } else {
+//            System.out.println("Dealer wins.");
+//        }
         running = false;
     }
 }
