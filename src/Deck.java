@@ -7,14 +7,13 @@ public class Deck {
     public Deck() {
 
         String[] suits = {"Hearts", "Diamonds", "Clubs", "Spades"};
-        String[] ranks = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "Jack", "Queen", "King"};
+        String[] ranks = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9","10", "Jack", "Queen", "King"};
 
         for (int suit = 0; suit < 4; suit++) {
             for (int rank = 0; rank < 12; rank++) {
                 cards.add(new Card(ranks[rank], suits[suit]));
             }
         }
-
         shuffleDeck();
     }
 

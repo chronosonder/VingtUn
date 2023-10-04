@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class Game {
 
+    int minBet, maxBet;
     Scanner kInput;
     Deck gameDeck;
     ArrayList<Player> gamePlayers;
@@ -22,19 +23,19 @@ public class Game {
         this.stuckPlayers = new ArrayList<>();
 
         this.running = true;
+        minBet = 50;
+        maxBet = 150;
     }
 
     //    Main game loop
     public void startGame() {
-
         initGame();
-
         while (running) {
             dealerTurn();
-            if (gamePlayers.isEmpty()){
+            if (gamePlayers.isEmpty()) {
                 endGame();
             } else {
-                for (Player player: gamePlayers){
+                for (Player player : gamePlayers) {
                     this.currentPlayer = player;
                     playerTurn();
                 }
@@ -42,17 +43,55 @@ public class Game {
         }//END WHILE
     }
 
-    public void initGame() {
-        System.out.println("Game starts...\n");
-
-
-        for (Player player: gamePlayers){
+    public void dealCards() {
+        for (Player player : gamePlayers) {
             player.drawCard(gameDeck.deal());
-            System.out.printf("%n%s,you are dealt: %s.%n",player.getName(), player.getHand().get(0).display());
-            System.out.printf("Hand value: %d.%n%n", player.getHandValue());
         }
         dealerTurn();
+    }
 
+    public void initialStake() {
+        int stakeAmount;
+
+        for (Player player : gamePlayers) {
+            stakeAmount = 0;
+
+            System.out.printf("You were dealt %s as your first card.\n", player.getHand().get(0).display());
+            System.out.printf("Your balance is: £%d.\n", player.getBalance());
+
+            do {
+                System.out.printf("\nBets range: %d - %d (min-max).\n", minBet, maxBet);
+                System.out.print("Now please place your bet: £");
+
+                stakeAmount = kInput.nextInt();
+
+            } while (!(stakeAmount >= minBet && stakeAmount <= maxBet));
+
+            if (player.getBalance() >= stakeAmount) {
+                player.setBalance(-stakeAmount);
+                player.setStakes(stakeAmount);
+            } else {
+                System.out.println("You don't have enough funds to place this bet. You will be kicked out of the game.");
+                gamePlayers.remove(player);
+            }
+
+        }
+    }
+
+//    Deals a round of cards, takes initial player bets then deals a second round of cards.
+
+    public void initGame() {
+        System.out.println("Game starts...\n");
+        System.out.println("Dealing one card to all players...");
+
+        dealCards();
+        initialStake();
+        dealCards();
+
+        if (gameDealer.getHandValue() == 21) {
+            System.out.println("Banker has pontoon");
+            endGame();
+        }
     }
 
     public void playerTurn() {
@@ -84,6 +123,7 @@ public class Game {
             stuckPlayers.add(currentPlayer);
         }
     }
+
     public boolean playerBust(Player currentPlayer) {
         return currentPlayer.getHandValue() > 21;
     }
@@ -98,12 +138,12 @@ public class Game {
 
     public void endGame() {
 //        Display bust players
-        for (Player player: bustPlayers){
+        for (Player player : bustPlayers) {
             System.out.printf("\n%s went bust with a hand of %d.", player.getName(), player.getHandValue());
         }
 
 //        Display players hands
-        for (Player player: stuckPlayers){
+        for (Player player : stuckPlayers) {
             System.out.printf("\n%s sticks a hand of %d.", player.getName(), player.getHandValue());
         }
 

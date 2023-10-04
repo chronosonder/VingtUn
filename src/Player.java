@@ -6,19 +6,20 @@ public class Player {
     private String name;
     private int handValue;
     private ArrayList<Card> hand;
+    private ArrayList<Integer> stakes;
+    private int balance;
 
+//    Constructor
     public Player(String playerName) {
         this.name = playerName;
         hand = new ArrayList<>();
         handValue = 0;
+        balance = 1000;
+        stakes = new ArrayList<>();
     }
 
 
-    public void drawCard(Card card) {
-        hand.add(card);
-        evaluateCard(card);
-    }
-
+//    Getters
     public ArrayList<Card> getHand() {
         return hand;
     }
@@ -30,7 +31,33 @@ public class Player {
     public int getHandValue() {
         return handValue;
     }
+    public int getBalance() {
+        return balance;
+    }
+    public int getStakes() {
+        int totalStake = 0;
 
+        for (Integer stake : stakes){
+            totalStake += stake;
+        }
+
+        return totalStake;
+    }
+
+//    Setters
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
+    public void drawCard(Card card) {
+        hand.add(card);
+        evaluateCard(card);
+    }
+    public void setStakes(int stake) {
+        this.stakes.add(stake);
+    }
+
+
+    //    Method evaluates each drawn card and adds its value to handValue
     public void evaluateCard(Card currentCard) {
         int aceChoice;
 
@@ -46,5 +73,4 @@ public class Player {
             handValue += Integer.parseInt(currentCard.getRank());
         }
     }
-
 }
